@@ -20,6 +20,8 @@ if (is_file(__DIR__ . '/../../../autoload.php')) {
     require __DIR__ . '/../vendor/autoload.php';
 }
 
+\Tracy\Debugger::enable(\Tracy\Debugger::PRODUCTION, __DIR__.'/../log');
+
 $defaultConfig = [
     /**
      * Access Control adapter

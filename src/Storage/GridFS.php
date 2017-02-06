@@ -229,7 +229,8 @@ class GridFS implements StorageInterface {
         ]);
 
         if ($cursor->count()) {
-            return $cursor->getNext();
+            $cursor->getNext();
+			return $cursor->current();
         }
 
         return false;
